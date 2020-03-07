@@ -29,3 +29,38 @@ What we achieve with structered programming is hence two things:
 2. Functional decomposition, which makes everything possible.
 
 Object Oriented Programming
+What is OO? On unsatisfactory answer is "combination of data and function", but this is unsatisfying, because it implies
+f(o) is somehow different from o.f(). People were still passing data structures into functions.
+
+Encapsulation?
+This is saying that outside of a point the data is hidden and only some functions are avaliable.
+Well, we actually have perfect encapsulation in C.
+
+I.e if we consider the following to be point.h
+
+struct Point;
+struct Point* makePoint(double x, double y);
+double distance(struct Point *p1, struct Point *p2);
+
+(Martin, Robert C.. Clean Architecture (Robert C. Martin Series) (p. 35). Pearson Education. Kindle Edition.)
+
+In Java, they abolished the header/implementation split altogether, so there is not perfect encapsulation there either.
+
+Inheritance?
+This is simply the redeclaration of a group of variables and functions within an enclosing scope.
+
+int main(int ac, char** av) {
+  struct NamedPoint* origin = makeNamedPoint(0.0, 0.0, "origin");
+  struct NamedPoint* upperRight = makeNamedPoint (1.0, 1.0, "upperRight");
+  printf("distance=%f\n",
+    distance(
+             (struct Point*) origin, 
+             (struct Point*) upperRight));
+}
+
+Martin, Robert C.. Clean Architecture (Robert C. Martin Series) (p. 39). Pearson Education. Kindle Edition. 
+
+This shows in C some trickery, since we can cast one to the other and use it in the same way, but we are also forced to
+use explicit casting, which is not as neat as the implicit casting with inheritance in OO.
+
+Polymorphism?
