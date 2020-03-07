@@ -3,7 +3,8 @@ The major concerns of architecture:
  - Seperation of Components       - Is everything seperated out properly
  - Data Management                - Our programs are just control and data
 
-Paradigms:
+Paradigms
+---------
 Each paradigm removes capabilities from the programmer, imposing extra discipline on the programmer. They less tell the programmer
 what to do, and more tell the programmer what not to do.
 
@@ -12,6 +13,7 @@ what to do, and more tell the programmer what not to do.
 3. Functional programming: Impose discipline on location of and access to data
 
 Structered Programming
+----------------------
 Unrestrained use of goto made proofs for programs difficult, making them unable to be broken down into smaller units. Instead,
 the "if else" and "do/while" constructs exclusively represent all options, as well as allow programs to be decomposed into smaller
 units.
@@ -31,6 +33,7 @@ What we achieve with structered programming is hence two things:
 -> In conclusion, imposes discipline on direct transfer of control
 
 Object Oriented Programming
+---------------------------
 What is OO? On unsatisfactory answer is "combination of data and function", but this is unsatisfying, because it implies
 f(o) is somehow different from o.f(). People were still passing data structures into functions.
 
@@ -84,6 +87,7 @@ Dependancy Inversion
 OO is the ability (through polymorphism) to gain absoloute control over every source code dependancy in the system.
 
 Functional Programming
+----------------------
 Immutability and Architecture? All race conditions, deadlocks, and concurrentupdate problems are due to mutable variables.
 
 Is immutability practiceable?
@@ -94,5 +98,10 @@ I.e the compare and swap scheme, which means keep retrying the operation if the 
 
 -> In summary imposes discipline on variable assignment.
 
+The Single Responsibility Principle
+-----------------------------------
+A module should be responsible to one, and only one actor. 
+
+Symptom 1. Accidental Duplication
 
 
