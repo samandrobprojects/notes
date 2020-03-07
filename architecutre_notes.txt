@@ -103,5 +103,20 @@ The Single Responsibility Principle
 A module should be responsible to one, and only one actor. 
 
 Symptom 1. Accidental Duplication
+Symptom 2. Merge issues
 
+This comes about in a class, because in reality things cannot be perfectly descriptive or modular, and business logic
+changes. Knowing what is acting on this class is important, and the first sign I have had that you cannot consider classes
+in isolation
+
+Solutions
+1. Perhaps the simplest is to seperate the functions from the data, and have an EmployeeData class, and three seperate classes for
+the other functions.
+
+The downside to this solution is now you have three classes that you have to instantiate and track, and a common solution
+to this is to use the facade pattern. 
+
+Facade class, EmployeeFacade, is just responsible for instantiating and delegating to these inner classes.
+
+2. 
 
