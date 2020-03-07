@@ -28,6 +28,8 @@ What we achieve with structered programming is hence two things:
 1. Falsifiable units, and hence testable units, otherwise testing would be impossible
 2. Functional decomposition, which makes everything possible.
 
+-> In conclusion, imposes discipline on direct transfer of control
+
 Object Oriented Programming
 What is OO? On unsatisfactory answer is "combination of data and function", but this is unsatisfying, because it implies
 f(o) is somehow different from o.f(). People were still passing data structures into functions.
@@ -64,3 +66,33 @@ This shows in C some trickery, since we can cast one to the other and use it in 
 use explicit casting, which is not as neat as the implicit casting with inheritance in OO.
 
 Polymorphism?
+Did polymorphism exist before OO? yes, it existed using some function pointer trickery.
+
+extern struct FILE* STDIN;
+  int getchar() {
+  return STDIN->read();
+}
+
+I.e you set STDIN to anything that is a FILE structure, then this function updates
+
+Martin, Robert C.. Clean Architecture (Robert C. Martin Series) (p. 42). Pearson Education. Kindle Edition. 
+
+-> In conclusion, imposes discipline on indirect transfer of control, because before with function pointers we could
+   do anything
+
+Dependancy Inversion
+OO is the ability (through polymorphism) to gain absoloute control over every source code dependancy in the system.
+
+Functional Programming
+Immutability and Architecture? All race conditions, deadlocks, and concurrentupdate problems are due to mutable variables.
+
+Is immutability practiceable?
+If you have infinite processor speed and space, since you do not update state, instead you store the entire list of transactions.
+
+If we are talking about the "segregation of immutability", often a transactional memory is used to prevent concurrency issues.
+I.e the compare and swap scheme, which means keep retrying the operation if the value changed mid operation.
+
+-> In summary imposes discipline on variable assignment.
+
+
+
