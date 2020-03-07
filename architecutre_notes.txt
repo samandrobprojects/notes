@@ -123,4 +123,29 @@ The Open-Closed Principle
 A software artifact should be open for extension but closed for modification. In other words you should be to extend
 something without modifying the artifact.
 
+Couple of interesting class ideas:
+ -> You don't connect directly to the idea of a database, instead you have a DATA_GATEWAY
+ -> You don't connect directly to the idea of a view, instead you have a PRESENTER
+    -> It is the presenter which holds all the DATA, and build logic
+    -> This means the view only has to worry about displaying
+ -> SCREEN_PRESENTER and PRINT_PRESENTER so that we seperate worrying about screens and print
+
+Anytime that the source code dependency arrows go in two directions means that one cannot be changed without changing both.
+
+Golden Depedency Rule:
+If A should be protected from changes in B, then B should depend on A.
+
+Higher level components are protected from changes to lower level components.
+
+Information Hiding
+Interfaces serve another purpose. They are about information hiding. Without this, you would have transitive dependencies, and we
+should not depend on things that we do not directly use.
+
+Liskov Substitution Principle
+-----------------------------
+A famous violation is a Square is a Rectangle, since if you set height then set width on a square, you end up with
+different behaviour.
+(Since the user believes they are interacting with a rectangle.)
+
+
 
