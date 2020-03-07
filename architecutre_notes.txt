@@ -1,0 +1,31 @@
+The major concerns of architecture:
+ - Function                       - Does it work the way we want
+ - Seperation of Components       - Is everything seperated out properly
+ - Data Management                - Our programs are just control and data
+
+Paradigms:
+Each paradigm removes capabilities from the programmer, imposing extra discipline on the programmer. They less tell the programmer
+what to do, and more tell the programmer what not to do.
+
+1. Structured Programming: Algorithmic foundation of our modules
+2. OO: Polymorphism is the mechanism to cross architectural boundaries.
+3. Functional programming: Impose discipline on location of and access to data
+
+Structered Programming
+Unrestrained use of goto made proofs for programs difficult, making them unable to be broken down into smaller units. Instead,
+the "if else" and "do/while" constructs exclusively represent all options, as well as allow programs to be decomposed into smaller
+units.
+
+Three constructs can represent all programs, selection, iteration, and sequence. The exact structures that make a program proveable,
+are also the minimum neccessary to represent them.
+
+Science does not work by proving statements true, but rather by proving statements false. I.e "falsifiable, not proveable".
+
+Dijstra said that tests show the presence, not the absence, of bugs. A program can hence be proven incorrect by a test, but
+not proven correct.
+
+What we achieve with structered programming is hence two things:
+1. Falsifiable units, and hence testable units, otherwise testing would be impossible
+2. Functional decomposition, which makes everything possible.
+
+Object Oriented Programming
