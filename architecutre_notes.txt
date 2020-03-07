@@ -118,5 +118,9 @@ to this is to use the facade pattern.
 
 Facade class, EmployeeFacade, is just responsible for instantiating and delegating to these inner classes.
 
-2. 
+The Open-Closed Principle
+-------------------------
+A software artifact should be open for extension but closed for modification. In other words you should be to extend
+something without modifying the artifact.
+
 
